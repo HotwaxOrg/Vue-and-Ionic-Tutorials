@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+       <h1>{{ message }}</h1>
+       <button @click="clickMe">Click Me!</button> 
     </div>
 
     <script>
@@ -19,6 +20,12 @@
                 return{
                     "message" : "Hello! I am Viresh. This is my first Vue code"
                 }
+            }, 
+            methods : {
+                clickMe(){
+                    console.log("Button Clicked!!");
+                    this.message = "You just clicked the button";
+                },
             }
         });
         // Mounting the app to our div
