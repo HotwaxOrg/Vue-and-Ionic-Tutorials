@@ -8,6 +8,15 @@
         link: "https://www.google.com",
       };
     },
+    methods : {
+      toggleStatus(){
+        if (this.status === "active"){
+          this.status = "inactive";
+        } else{
+          this.status = "active";
+        }
+      },
+    },
   }
 </script>
 
@@ -34,6 +43,9 @@
 
    <!-- Bind directives -->
    <!-- <a v-bind:href="link" target="_blank">Click to open google.com</a> -->
-   <a :href="link" target="_blank">Click to open google.com</a>
+   <a :href="link" target="_blank">Click to open google.com</a><br/>
+
+   <!-- Events and Methods -->
+    <button @click="toggleStatus">Change Status!</button>
   </template>
 
