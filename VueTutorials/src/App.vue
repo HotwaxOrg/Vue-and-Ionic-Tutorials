@@ -1,23 +1,49 @@
-<script>
+<script>  
+  import { ref } from 'vue';
+  // Option api
+  // export default{
+  //   data(){
+  //     return {
+  //       name: "Viresh Shah",
+  //       status: "active",
+  //       tasks : ["Task 1", "Task 2", "Task 3"],
+  //       link: "https://www.google.com",
+  //     };
+  //   },
+  //   methods : {
+  //     toggleStatus(){
+  //       if (this.status === "active"){
+  //         this.status = "inactive";
+  //       } else{
+  //         this.status = "active";
+  //       }
+  //     },
+  //   },
+  // }
+
+  // Composition api
   export default{
-    data(){
-      return {
-        name: "Viresh Shah",
-        status: "active",
-        tasks : ["Task 1", "Task 2", "Task 3"],
-        link: "https://www.google.com",
-      };
-    },
-    methods : {
-      toggleStatus(){
-        if (this.status === "active"){
-          this.status = "inactive";
+    setup(){
+      const name = ref("Viresh Shah");
+      const status = ref("active");
+      const tasks = ref(["Task1", "Task2", "Task3"]);
+
+      const toggleStatus = () => {
+        if (status.value === "active"){
+          status.value = "inactive";
         } else{
-          this.status = "active";
+          status.value = "active";
         }
-      },
-    },
-  }
+      };
+
+      return {
+        name, 
+        status,
+        tasks,
+        toggleStatus,
+      }
+    }
+  };
 </script>
 
 <template>
@@ -43,7 +69,7 @@
 
    <!-- Bind directives -->
    <!-- <a v-bind:href="link" target="_blank">Click to open google.com</a> -->
-   <a :href="link" target="_blank">Click to open google.com</a><br/>
+   <!-- <a :href="link" target="_blank">Click to open google.com</a><br/> -->
 
    <!-- Events and Methods -->
     <button @click="toggleStatus">Change Status!</button>
