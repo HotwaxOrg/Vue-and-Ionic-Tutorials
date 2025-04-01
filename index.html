@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test App - CDN</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script>
+        // Creating a new instance of the Vue app
+        const app = Vue.createApp({
+            // A method that will return an object
+            data(){
+                return{
+                    "message" : "Hello! I am Viresh. This is my first Vue code"
+                }
+            }
+        });
+        // Mounting the app to our div
+        app.mount("#app");
+    </script>
+</body>
+</html>
