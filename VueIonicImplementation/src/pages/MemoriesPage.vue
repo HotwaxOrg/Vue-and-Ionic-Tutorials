@@ -1,19 +1,11 @@
 <template>
-    <ion-page>
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>All Memories</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content>
-            <ion-list>
-                <ion-item>Viresh</ion-item>
-                <ion-item>Luffy</ion-item>
-                <ion-item>Itachi</ion-item>
-                <ion-item>Zoro</ion-item>
-            </ion-list>
-        </ion-content>
-    </ion-page>
+    <base-layout pageTitle="Memories">
+        <ion-list>
+            <ion-item>A trip into the mountains</ion-item>
+            <ion-item>Surfing the sea</ion-item>
+            <ion-item>Good eating</ion-item>
+        </ion-list>
+    </base-layout>
 </template>
 
 <script setup lang="ts">
