@@ -1,7 +1,7 @@
 <template>
-    <base-layout pageTitle="Memories">
+    <base-layout pageTitle="All Memories">
         <ion-list>
-            <ion-item>A trip into the mountains</ion-item>
+            <ion-item router-link="/memories/1">A trip into the mountains</ion-item>
             <ion-item>Surfing the sea</ion-item>
             <ion-item>Good eating</ion-item>
         </ion-list>
@@ -9,5 +9,5 @@
 </template>
 
 <script setup lang="ts">
-    import { IonPage, IonHeader, IonTitle, IonContent, IonToolbar, IonList, IonItem } from '@ionic/vue';
+    import { IonList, IonItem } from '@ionic/vue';
 </script>
